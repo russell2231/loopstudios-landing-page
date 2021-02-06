@@ -7,7 +7,7 @@
 	}
 
 	.about__content {
-		padding: 4.8rem 2.4rem;
+		padding: 4.8rem 2.4rem 0;
 	}
 
 	.about__heading {
@@ -18,6 +18,7 @@
 @include desktop {
 	.about {
 		text-align: left;
+		padding: 16rem 0 18.4rem;
 
 		.container {
 			display: flex;

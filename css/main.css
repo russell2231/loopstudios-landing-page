@@ -39,6 +39,16 @@ h2 {
   }
 }
 
+h3 {
+  font-size: 2.4rem;
+}
+
+@media screen and (min-width: 1440px) {
+  h3 {
+    font-size: 3.2rem;
+  }
+}
+
 p {
   line-height: 1.6;
   margin: 0;
@@ -60,6 +70,47 @@ p {
 .list {
   list-style: none;
   padding-left: 0;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.grid--col-4 {
+  gap: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--col-4 {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .grid--col-4 {
+    -ms-grid-columns: (minmax(256px, 1fr))[4];
+        grid-template-columns: repeat(4, minmax(256px, 1fr));
+  }
+}
+
+.btn {
+  border: 1px solid #000;
+  font-family: 'Alata', sans-serif;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 1.3rem 3.8rem;
+  text-decoration: none;
+  color: #000;
+  -webkit-transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background: #000;
+  color: #fff;
 }
 
 .hero {
@@ -199,7 +250,7 @@ p {
 }
 
 .about .about__content {
-  padding: 4.8rem 2.4rem;
+  padding: 4.8rem 2.4rem 0;
 }
 
 .about .about__heading {
@@ -209,6 +260,7 @@ p {
 @media screen and (min-width: 1024px) {
   .about {
     text-align: left;
+    padding: 16rem 0 18.4rem;
   }
   .about .container {
     display: -webkit-box;
@@ -252,6 +304,224 @@ p {
   .about .about__content {
     width: 49%;
     padding: 9.6rem 0 0 9.6rem;
+  }
+}
+
+.creations {
+  padding-bottom: 9.6rem;
+}
+
+.creations .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 1440px) {
+  .creations .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.creations .creations__heading {
+  margin-top: 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 1440px) {
+  .creations .creations__heading {
+    margin-bottom: 8rem;
+  }
+}
+
+.creations .grid {
+  padding-bottom: 3.4rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .creations .grid {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+.creations .creations__card {
+  height: 120px;
+  -webkit-box-shadow: inset 10rem 0 10rem rgba(0, 0, 0, 0.6);
+          box-shadow: inset 10rem 0 10rem rgba(0, 0, 0, 0.6);
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 0.5s ease-out;
+  transition: -webkit-box-shadow 0.5s ease-out;
+  transition: box-shadow 0.5s ease-out;
+  transition: box-shadow 0.5s ease-out, -webkit-box-shadow 0.5s ease-out;
+}
+
+.creations .creations__card:hover {
+  -webkit-box-shadow: inset 100rem 0 10rem rgba(255, 255, 255, 0.8);
+          box-shadow: inset 100rem 0 10rem rgba(255, 255, 255, 0.8);
+}
+
+.creations .creations__card:hover .creations__tagline {
+  color: #000;
+}
+
+@media screen and (min-width: 1440px) {
+  .creations .creations__card {
+    height: 450px;
+  }
+}
+
+.creations .creations__tagline {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+  color: #fff;
+  margin: 0;
+  display: inline-block;
+  width: 40%;
+}
+
+@media screen and (min-width: 1024px) {
+  .creations .creations__tagline {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .creations .creations__tagline {
+    width: 65%;
+    left: 4rem;
+    bottom: 3.2rem;
+  }
+}
+
+.creations .creations__btn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media screen and (min-width: 1440px) {
+  .creations .creations__btn {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-bottom: 8.4rem;
+  }
+}
+
+.creations--earth {
+  background: url(../../images/mobile/image-deep-earth.jpg) no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 1440px) {
+  .creations--earth {
+    background: url(../../images/desktop/image-deep-earth.jpg) no-repeat;
+    background-size: cover;
+  }
+}
+
+.creations--arcade {
+  background: url(../../images/mobile/image-night-arcade.jpg) no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 1440px) {
+  .creations--arcade {
+    background: url(../../images/desktop/image-night-arcade.jpg) no-repeat;
+    background-size: cover;
+  }
+}
+
+.creations--soccer {
+  background: url(../../images/mobile/image-soccer-team.jpg) no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 1440px) {
+  .creations--soccer {
+    background: url(../../images/desktop/image-soccer-team.jpg) no-repeat;
+    background-size: cover;
+  }
+}
+
+.creations--grid {
+  background: url(../../images/mobile/image-grid.jpg) no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 1440px) {
+  .creations--grid {
+    background: url(../../images/desktop/image-grid.jpg) no-repeat;
+    background-size: cover;
+  }
+}
+
+.creations--up {
+  background: url(../../images/mobile/image-from-above.jpg) no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 1440px) {
+  .creations--up {
+    background: url(../../images/desktop/image-from-above.jpg) no-repeat;
+    background-size: cover;
+  }
+}
+
+.creations--borealis {
+  background: url(../../images/mobile/image-pocket-borealis.jpg) no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 1440px) {
+  .creations--borealis {
+    background: url(../../images/desktop/image-pocket-borealis.jpg) no-repeat;
+    background-size: cover;
+  }
+}
+
+.creations--curiosity {
+  background: url(../../images/mobile/image-curiosity.jpg) no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 1440px) {
+  .creations--curiosity {
+    background: url(../../images/desktop/image-curiosity.jpg) no-repeat;
+    background-size: cover;
+  }
+}
+
+.creations--fisheye {
+  background: url(../../images/mobile/image-fisheye.jpg) no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 1440px) {
+  .creations--fisheye {
+    background: url(../../images/desktop/image-fisheye.jpg) no-repeat;
+    background-size: cover;
   }
 }
 /*# sourceMappingURL=main.css.map */

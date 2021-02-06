@@ -1,0 +1,162 @@
+.creations {
+	padding-bottom: 9.6rem;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+
+		@include widescreen {
+			flex-direction: row;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+	}
+
+	.creations__heading {
+		margin-top: 0;
+		text-align: center;
+
+		@include widescreen {
+			margin-bottom: 8rem;
+		}
+	}
+
+	.grid {
+		padding-bottom: 3.4rem;
+
+		@include widescreen {
+			order: 3;
+		}
+	}
+
+	.creations__card {
+		height: 120px;
+		box-shadow: inset 10rem 0 10rem rgba($color: #000, $alpha: 0.6);
+		position: relative;
+		cursor: pointer;
+		transition: box-shadow 0.5s ease-out;
+
+		&:hover {
+			box-shadow: inset 100rem 0 10rem rgba($color: #fff, $alpha: 0.8);
+		}
+
+		&:hover .creations__tagline {
+			color: #000;
+		}
+
+		@include widescreen {
+			height: 450px;
+		}
+	}
+
+	.creations__tagline {
+		position: absolute;
+		left: 2rem;
+		bottom: 2rem;
+		color: #fff;
+		margin: 0;
+		display: inline-block;
+		width: 40%;
+
+		@include desktop {
+			width: 30%;
+		}
+
+		@include widescreen {
+			width: 65%;
+			left: 4rem;
+			bottom: 3.2rem;
+		}
+	}
+
+	.creations__btn {
+		align-self: center;
+
+		@include widescreen {
+			order: 2;
+			align-self: flex-end;
+			margin-bottom: 8.4rem;
+		}
+	}
+}
+
+.creations--earth {
+	background: url(../../images/mobile/image-deep-earth.jpg) no-repeat;
+	background-size: cover;
+
+	@include widescreen {
+		background: url(../../images/desktop/image-deep-earth.jpg) no-repeat;
+		background-size: cover;
+	}
+}
+
+.creations--arcade {
+	background: url(../../images/mobile/image-night-arcade.jpg) no-repeat;
+	background-size: cover;
+
+	@include widescreen {
+		background: url(../../images/desktop/image-night-arcade.jpg) no-repeat;
+		background-size: cover;
+	}
+}
+
+.creations--soccer {
+	background: url(../../images/mobile/image-soccer-team.jpg) no-repeat;
+	background-size: cover;
+
+	@include widescreen {
+		background: url(../../images/desktop/image-soccer-team.jpg) no-repeat;
+		background-size: cover;
+	}
+}
+
+.creations--grid {
+	background: url(../../images/mobile/image-grid.jpg) no-repeat;
+	background-size: cover;
+
+	@include widescreen {
+		background: url(../../images/desktop/image-grid.jpg) no-repeat;
+		background-size: cover;
+	}
+}
+
+.creations--up {
+	background: url(../../images/mobile/image-from-above.jpg) no-repeat;
+	background-size: cover;
+
+	@include widescreen {
+		background: url(../../images/desktop/image-from-above.jpg) no-repeat;
+		background-size: cover;
+	}
+}
+
+.creations--borealis {
+	background: url(../../images/mobile/image-pocket-borealis.jpg) no-repeat;
+	background-size: cover;
+
+	@include widescreen {
+		background: url(../../images/desktop/image-pocket-borealis.jpg) no-repeat;
+		background-size: cover;
+	}
+}
+
+.creations--curiosity {
+	background: url(../../images/mobile/image-curiosity.jpg) no-repeat;
+	background-size: cover;
+
+	@include widescreen {
+		background: url(../../images/desktop/image-curiosity.jpg) no-repeat;
+		background-size: cover;
+	}
+}
+
+.creations--fisheye {
+	background: url(../../images/mobile/image-fisheye.jpg) no-repeat;
+	background-size: cover;
+
+	@include widescreen {
+		background: url(../../images/desktop/image-fisheye.jpg) no-repeat;
+		background-size: cover;
+	}
+}
