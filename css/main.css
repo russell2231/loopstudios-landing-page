@@ -11,7 +11,7 @@ body {
 h2,
 h3 {
   color: dimgray;
-  font-family: 'Joesefin Sans', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
 }
 
@@ -19,7 +19,8 @@ h1 {
   font-size: 4rem;
   text-transform: uppercase;
   color: #fff;
-  font-weight: 100;
+  font-weight: 300;
+  font-family: 'Josefin Sans';
 }
 
 @media screen and (min-width: 1024px) {
@@ -69,7 +70,6 @@ a {
   border: 2px solid #fff;
   padding: 2.4rem;
   margin-top: 16.3rem;
-  letter-spacing: 3px;
 }
 
 @media screen and (min-width: 768px) {
@@ -84,7 +84,6 @@ a {
     width: 650px;
     padding: 4rem;
     margin-top: 13rem;
-    letter-spacing: 9px;
   }
 }
 

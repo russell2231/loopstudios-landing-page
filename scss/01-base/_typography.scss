@@ -11,7 +11,7 @@ body {
 h2,
 h3 {
 	color: $headings-color;
-	font-family: 'Joesefin Sans', sans-serif;
+	font-family: 'Josefin Sans', sans-serif;
 	font-weight: 300;
 }
 
@@ -19,7 +19,8 @@ h1 {
 	font-size: 4rem;
 	text-transform: uppercase;
 	color: #fff;
-	font-weight: 100;
+	font-weight: 300;
+	font-family: 'Josefin Sans';
 
 	@include desktop {
 		font-size: 7.2rem;
