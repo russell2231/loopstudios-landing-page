@@ -8,6 +8,10 @@
 	max-width: 1110px;
 	margin: 0 auto;
 	padding: 0 2.4rem;
+
+	@include widescreen {
+		padding: 0;
+	}
 }
 
 .list {
