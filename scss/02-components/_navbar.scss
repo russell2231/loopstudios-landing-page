@@ -1,4 +1,4 @@
-.nav {
+.nav--main {
 	padding: 3rem 0;
 	display: flex;
 	justify-content: space-between;
@@ -51,7 +51,7 @@
 .hero.active {
 	background: #000;
 
-	.nav {
+	.nav--main {
 		.nav__toggler {
 			background: url(../../images/icon-close.svg) no-repeat;
 			width: 20px;

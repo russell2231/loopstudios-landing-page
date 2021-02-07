@@ -1,7 +1,6 @@
 .hero {
 	background: url(../../images/mobile/image-hero.jpg) no-repeat;
 	background-size: cover;
-	background-position: top center;
 	height: 100vh;
 
 	@include desktop {

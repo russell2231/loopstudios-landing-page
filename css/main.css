@@ -77,6 +77,13 @@ p {
   display: grid;
 }
 
+@media screen and (min-width: 1024px) {
+  .grid--col-2 {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .grid--col-4 {
   gap: 24px;
 }
@@ -116,7 +123,6 @@ p {
 .hero {
   background: url(../../images/mobile/image-hero.jpg) no-repeat;
   background-size: cover;
-  background-position: top center;
   height: 100vh;
 }
 
@@ -149,7 +155,7 @@ p {
   }
 }
 
-.nav {
+.nav--main {
   padding: 3rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -164,50 +170,50 @@ p {
       flex-wrap: wrap;
 }
 
-.nav .nav__toggler {
+.nav--main .nav__toggler {
   width: 24px;
   height: 16px;
   background: url(../../images/icon-hamburger.svg) no-repeat;
 }
 
 @media screen and (min-width: 768px) {
-  .nav .nav__toggler {
+  .nav--main .nav__toggler {
     display: none;
   }
 }
 
-.nav .nav__list {
+.nav--main .nav__list {
   display: none;
   margin: 0;
 }
 
 @media screen and (min-width: 768px) {
-  .nav .nav__list {
+  .nav--main .nav__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
-.nav .nav__item {
+.nav--main .nav__item {
   padding: 0 1.6rem;
   font-family: 'Alata', sans-serif;
 }
 
-.nav .nav__item a {
+.nav--main .nav__item a {
   color: #fff;
   text-decoration: none;
   padding-bottom: 8px;
 }
 
 @media screen and (min-width: 768px) {
-  .nav .nav__item a:hover {
+  .nav--main .nav__item a:hover {
     border-bottom: 2px solid #fff;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .nav {
+  .nav--main {
     padding: 6.4rem 0 0;
   }
 }
@@ -216,18 +222,18 @@ p {
   background: #000;
 }
 
-.hero.active .nav .nav__toggler {
+.hero.active .nav--main .nav__toggler {
   background: url(../../images/icon-close.svg) no-repeat;
   width: 20px;
   height: 20px;
 }
 
-.hero.active .nav .nav__list {
+.hero.active .nav--main .nav__list {
   display: block;
   padding-top: 15.9rem;
 }
 
-.hero.active .nav .nav__list .nav__item {
+.hero.active .nav--main .nav__list .nav__item {
   padding: 1.2rem 0;
   font-size: 2.4rem;
   font-family: 'Josefin Sans', sans-serif;
@@ -522,6 +528,126 @@ p {
   .creations--fisheye {
     background: url(../../images/desktop/image-fisheye.jpg) no-repeat;
     background-size: cover;
+  }
+}
+
+.footer {
+  background: #000;
+  padding: 5.6rem 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer .container {
+    padding: 0 5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer .container {
+    padding: 0;
+  }
+}
+
+.footer .footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer .footer__nav {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.footer .nav__list {
+  margin: 3.2rem 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 2.4rem 0 0;
+  }
+}
+
+.footer .nav__item {
+  padding-bottom: 1.6rem;
+}
+
+.footer .nav__item a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer .nav__item a:hover {
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer .nav__item {
+    padding-bottom: 0;
+    padding-right: 3.2rem;
+  }
+}
+
+.footer .footer__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 1.6rem;
+}
+
+.footer .footer__socials .social__item {
+  padding: 0 0.8rem;
+}
+
+.footer .footer__socials .social__item a:hover {
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer .footer__socials {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-bottom: 2.4rem;
+  }
+}
+
+.footer .copyright {
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer .copyright {
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    padding: 4.4rem 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
